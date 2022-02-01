@@ -1186,6 +1186,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1806065659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2940140703854564639, guid: f96ce05cae6529c45bf29951dfd743b5, type: 3}
+  m_PrefabInstance: {fileID: 2940140704875692327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1806065660
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806065659}
+  m_Material: {fileID: 13400000, guid: eaf2158098009ff4fbe37ac6472e7dca, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1806065661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806065659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 6b2bef887d1bf8f45a342c80b3b01b0f, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 1697520103}
 --- !u!1 &1851941325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1518,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2307567876801791898, guid: 4d2c27abdd2a094459db7b3f5cc4de13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820539774469215709, guid: 4d2c27abdd2a094459db7b3f5cc4de13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820539774469215709, guid: 4d2c27abdd2a094459db7b3f5cc4de13, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: da9912cd862b24a47849af2be8fc5cc4, type: 2}
+    - target: {fileID: 4704353153643356110, guid: 4d2c27abdd2a094459db7b3f5cc4de13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5937619512242676024, guid: 4d2c27abdd2a094459db7b3f5cc4de13, type: 3}
       propertyPath: m_Name
       value: ScrollBKGD

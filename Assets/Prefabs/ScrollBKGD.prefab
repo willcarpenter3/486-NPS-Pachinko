@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6425926178998549378}
   - component: {fileID: 7963105508684493863}
   - component: {fileID: 5289008326582501613}
+  - component: {fileID: 3820539774469215709}
+  - component: {fileID: 4704353153643356110}
+  - component: {fileID: 2307567876801791898}
   m_Layer: 0
   m_Name: ScrollBKGD
   m_TagString: Untagged
@@ -81,3 +84,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3820539774469215709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937619512242676024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.080844656, y: 0.07490302, z: 0.011421372}
+  m_Center: {x: 0.00023373339, y: -0.003233835, z: 0.039520536}
+--- !u!65 &4704353153643356110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937619512242676024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0063610477, y: 0.02098018, z: 0.0904625}
+  m_Center: {x: -0.042186327, y: -0.0043479153, z: -2.9603868e-18}
+--- !u!65 &2307567876801791898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937619512242676024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.004403485, y: 0.020923015, z: 0.0904625}
+  m_Center: {x: 0.03845424, y: -0.0051526194, z: -1.2442504e-17}
