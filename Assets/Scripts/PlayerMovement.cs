@@ -49,6 +49,14 @@ public class PlayerMovement : MonoBehaviour
             paused = false;
         }
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
 
     // Update is called once per frame
     void FixedUpdate()
