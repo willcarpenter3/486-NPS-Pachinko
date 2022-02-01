@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,19 +10,30 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float movementX;
 
+    Input controls;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        controls = new Input();
+
+        #region ControlMapping
+        controls.Player.Move.performed += OnMove;
+        controls.Player.Move.canceled += ctx => movementX = 0;
+        controls.Player.Move.Enable();
+        controls.Player.Drop.performed += OnDrop;
+        controls.Player.Drop.Enable();
+        #endregion
     }
 
-    private void OnMove(InputValue movementValue)
+    private void OnMove(CallbackContext ctx)
     {
-        Vector2 movementVector = movementValue.Get<Vector2>();
-        movementX = movementVector.x;
+        movementX = ctx.ReadValue<float>();
+        Vector2 movementVector = movementX * (new Vector2(1f, 0f));
+        //movementX = movementVector.x;
         Debug.Log(movementX);
     }
 
-    private void OnDrop(InputValue movementValue)
+    private void OnDrop(CallbackContext ctx)
     {
         // Turn on gravity
         rb.useGravity = true;
