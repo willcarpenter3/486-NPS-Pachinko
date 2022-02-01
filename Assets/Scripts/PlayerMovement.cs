@@ -6,40 +6,17 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject pausePanel;
     public GameObject player;
     private Rigidbody rb;
     private float movementX;
+    private bool paused = false;
 
     Input controls;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //controls = new Input();
-
-        //#region ControlMapping
-        //controls.Player.Move.performed += OnMove;
-        //controls.Player.Move.canceled += ctx => movementX = 0;
-        //controls.Player.Move.Enable();
-        //controls.Player.Drop.performed += OnDrop;
-        //controls.Player.Drop.Enable();
-        //#endregion
     }
-
-    //private void OnMove(CallbackContext ctx)
-    //{
-    //    movementX = ctx.ReadValue<float>();
-    //    Vector2 movementVector = movementX * (new Vector2(1f, 0f));
-    //    //movementX = movementVector.x;
-    //    Debug.Log(movementX);
-    //}
-
-    //private void OnDrop(CallbackContext ctx)
-    //{
-    //    // Turn on gravity
-    //    rb.useGravity = true;
-    //    // Disable player movement
-    //    player.GetComponent<PlayerMovement>().enabled = false;
-    //}
 
     private void OnMove(InputValue movement)
     {
@@ -55,6 +32,22 @@ public class PlayerMovement : MonoBehaviour
         rb.useGravity = true;
         // Disable player movement
         player.GetComponent<PlayerMovement>().enabled = false;
+    }
+
+    private void OnPause(InputValue pause)
+    {
+        if (!paused)
+        {
+            Time.timeScale = 0;
+            pausePanel.SetActive(true);
+            paused = true;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pausePanel.SetActive(false);
+            paused = false;
+        }
     }
 
     // Update is called once per frame
