@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         rb.useGravity = true;
         // Disable player movement
         player.GetComponent<PlayerMovement>().enabled = false;
+        GameManager.Instance.setIsPlaying(true);
     }
 
     // Update is called once per frame
