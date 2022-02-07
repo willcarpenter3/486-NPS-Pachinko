@@ -45,7 +45,16 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine("DisablePeg", collision.gameObject);
 
             // Play sound
-            SoundManager.Instance.PlayCollisionSound();
+            //SoundManager.Instance.PlayCollisionSound();
+            if (collision.gameObject.CompareTag("Peg"))
+            {
+                GameManager.Instance.addPoints(5); //Add points only for peg hits
+                SoundManager.Instance.PlayBarrelCollisionSound();
+            }
+            else
+            {
+                SoundManager.Instance.PlayBoxCollisionSound();
+            }
         }
     }
 
@@ -54,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         // Disable the collided object after a short delay
         peg.SetActive(false);
-        GameManager.Instance.addPoints(5);
     }
 
     // Update is called once per frame

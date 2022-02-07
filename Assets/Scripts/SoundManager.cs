@@ -10,7 +10,9 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource putDownSound;
 
-    public AudioSource collisionSound;
+    public AudioSource boxCollisionSound;
+
+    public AudioSource barrelCollisionSound;
 
     public AudioSource winSound;
 
@@ -43,9 +45,14 @@ public class SoundManager : MonoBehaviour
         putDownSound.Play();
     }
 
-    public void PlayCollisionSound()
+    public void PlayBoxCollisionSound()
     {
-        collisionSound.Play();
+        boxCollisionSound.Play();
+    }
+
+    public void PlayBarrelCollisionSound()
+    {
+        barrelCollisionSound.Play();
     }
 
     public void PlayWinSound()
