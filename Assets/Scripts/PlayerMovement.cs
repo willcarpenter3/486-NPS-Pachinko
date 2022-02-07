@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,32 +13,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //controls = new Input();
-
-        //#region ControlMapping
-        //controls.Player.Move.performed += OnMove;
-        //controls.Player.Move.canceled += ctx => movementX = 0;
-        //controls.Player.Move.Enable();
-        //controls.Player.Drop.performed += OnDrop;
-        //controls.Player.Drop.Enable();
-        //#endregion
     }
-
-    //private void OnMove(CallbackContext ctx)
-    //{
-    //    movementX = ctx.ReadValue<float>();
-    //    Vector2 movementVector = movementX * (new Vector2(1f, 0f));
-    //    //movementX = movementVector.x;
-    //    Debug.Log(movementX);
-    //}
-
-    //private void OnDrop(CallbackContext ctx)
-    //{
-    //    // Turn on gravity
-    //    rb.useGravity = true;
-    //    // Disable player movement
-    //    player.GetComponent<PlayerMovement>().enabled = false;
-    //}
 
     private void OnMove(InputValue movement)
     {
@@ -57,15 +31,25 @@ public class PlayerMovement : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = false;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Peg")
+        {
+            // Disable the collided object
+            collision.gameObject.SetActive(false);
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX * 0.5f, 0.0f, 0.0f);
 
         // Check the bounds of the player
-        if (player.transform.position.x + movement.x <= 10.0f && player.transform.position.x + movement.x >= -10.0f)
+        if (player.transform.rotation.y + movement.x <= 80.0f && player.transform.rotation.x + movement.y >= -80.0f)
         {   
-            player.transform.position += movement;
+            // Rotate the player
+            player.transform.Rotate(0.0f, movementX * -1.0f, 0.0f);
         }
     }
 }
