@@ -32,17 +32,20 @@ public class PlayerMovement : MonoBehaviour
         rb.useGravity = true;
         // Disable player movement
         player.GetComponent<PlayerMovement>().enabled = false;
-        // GameManager.Instance.setIsPlaying(true);
+        GameManager.Instance.setIsPlaying(true);
         // Launch the player in the direction of the pointer
         rb.AddForce(pointer.transform.up * -1000f);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Peg")
+        if (collision.gameObject.CompareTag("Peg") || collision.gameObject.CompareTag("Draggable"))
         {
             // Disable the collided object after a short delay
             StartCoroutine("DisablePeg", collision.gameObject);
+
+            // Play sound
+            SoundManager.Instance.PlayCollisionSound();
         }
     }
 
@@ -51,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         // Disable the collided object after a short delay
         peg.SetActive(false);
+        GameManager.Instance.addPoints(5);
     }
 
     // Update is called once per frame
