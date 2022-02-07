@@ -34,11 +34,9 @@ public class DragAndDrop : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            //TODO: Check if gamemanager says the game is playing or not
-
-            if (hit.collider != null 
-                && hit.collider.gameObject.layer == LayerMask.NameToLayer("Draggable"))
+            if (hit.collider != null && hit.collider.CompareTag("Draggable"))
             {
+                SoundManager.Instance.PlayPickUpSound();
                 StartCoroutine(DragUpdate(hit.collider.gameObject));
             }
         }
@@ -64,5 +62,6 @@ public class DragAndDrop : MonoBehaviour
                 yield return null;
             }
         }
+        SoundManager.Instance.PlayPutDownSound();
     }
 }
