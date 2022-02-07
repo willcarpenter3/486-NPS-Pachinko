@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerMovement : MonoBehaviour
 {
     public GameObject player;
+    public GameObject container;
+    public GameObject pointer;
     private Rigidbody rb;
     private float movementX;
 
@@ -14,59 +15,60 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //controls = new Input();
-
-        //#region ControlMapping
-        //controls.Player.Move.performed += OnMove;
-        //controls.Player.Move.canceled += ctx => movementX = 0;
-        //controls.Player.Move.Enable();
-        //controls.Player.Drop.performed += OnDrop;
-        //controls.Player.Drop.Enable();
-        //#endregion
     }
-
-    //private void OnMove(CallbackContext ctx)
-    //{
-    //    movementX = ctx.ReadValue<float>();
-    //    Vector2 movementVector = movementX * (new Vector2(1f, 0f));
-    //    //movementX = movementVector.x;
-    //    Debug.Log(movementX);
-    //}
-
-    //private void OnDrop(CallbackContext ctx)
-    //{
-    //    // Turn on gravity
-    //    rb.useGravity = true;
-    //    // Disable player movement
-    //    player.GetComponent<PlayerMovement>().enabled = false;
-    //}
 
     private void OnMove(InputValue movement)
     {
         //movementX = ctx.ReadValue<float>();
         Vector2 movementVector = movement.Get<Vector2>(); //movementX * (new Vector2(1f, 0f));
         movementX = movementVector.x;
-        Debug.Log(movementX);
     }
 
     private void OnDrop(InputValue drop)
     {
+        // Disable pointer
+        pointer.SetActive(false);
         // Turn on gravity
         rb.useGravity = true;
         // Disable player movement
         player.GetComponent<PlayerMovement>().enabled = false;
-        GameManager.Instance.setIsPlaying(true);
+        // GameManager.Instance.setIsPlaying(true);
+        // Launch the player in the direction of the pointer
+        rb.AddForce(pointer.transform.up * -1000f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Peg")
+        {
+            // Disable the collided object after a short delay
+            StartCoroutine("DisablePeg", collision.gameObject);
+        }
+    }
+
+    private IEnumerator DisablePeg(GameObject peg)
+    {
+        yield return new WaitForSeconds(0.5f);
+        // Disable the collided object after a short delay
+        peg.SetActive(false);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementX * 0.5f, 0.0f, 0.0f);
+        Vector3 movement = new Vector3(movementX, 0.0f, 0.0f);
 
-        // Check the bounds of the player
-        if (player.transform.position.x + movement.x <= 10.0f && player.transform.position.x + movement.x >= -10.0f)
-        {   
-            player.transform.position += movement;
+        Vector3 currentRotation = container.transform.rotation.eulerAngles;
+        Vector3 newRotation = new Vector3(0.0f, 0.0f, currentRotation.z + movement.x);
+        
+        // Bound checking on the angle
+        float angle = newRotation.z;
+        angle = (angle > 180) ? angle - 360 : angle;
+        if (angle >= -80.0f && angle <= 80.0f)
+        {
+            // Rotate the container
+            container.transform.rotation = Quaternion.Euler(newRotation);
         }
+
     }
 }
