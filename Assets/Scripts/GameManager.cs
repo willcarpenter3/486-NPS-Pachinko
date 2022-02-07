@@ -50,7 +50,11 @@ public class GameManager : MonoBehaviour
 
     public void increaseMultiplier()
     {
-        multiplier += 0.1f;
+        multiplier += 1.0f;
     }
 
+    public void decreaseMultiplier()
+    {
+        multiplier -= 0.8f;
+    }
 }
