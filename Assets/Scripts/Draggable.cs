@@ -90,10 +90,12 @@ public class Draggable : MonoBehaviour
             if (wrong)
             {
                 GameManager.Instance.addPoints(-10);
+                GameManager.Instance.decreaseMultiplier();
             }
             else
             {
                 GameManager.Instance.addPoints(10);
+                GameManager.Instance.increaseMultiplier();
             }
         }
      
