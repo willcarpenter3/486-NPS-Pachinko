@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         rb.useGravity = true;
         // Disable player movement
         player.GetComponent<PlayerMovement>().enabled = false;
+        GameManager.Instance.setIsPlaying(true);
     }
 
     private void OnCollisionEnter(Collision collision)
