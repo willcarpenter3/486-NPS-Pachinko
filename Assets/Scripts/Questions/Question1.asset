@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc4a7c978e5cb94a8788b73329f9981, type: 3}
+  m_Name: Question1
+  m_EditorClassIdentifier: 
+  question: 'In order for a protestor to receive an automatic stop-work order, the
+    timeline  for vendor to submit a post-award protest to GAO is:'
+  fourAnswers: 1
+  answerZero: 7 calendar days after Contract Award
+  answerOne: 10 calendar after Contract Award
+  answerTwo: 5 calendar days after receipt of a debriefing
+  answerThree: 10 calendar days after contract award or within 5 days after a  debriefing
+    date, whichever is later
+  correctAnswer: 2

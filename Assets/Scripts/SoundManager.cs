@@ -16,6 +16,23 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource cannonSound;
 
+    //Singleton Stuff
+
+    private static SoundManager _instance;
+
+    public static SoundManager Instance { get { return _instance; } }
+
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        } else {
+            _instance = this;
+        }
+    }
+
     public void PlayPickUpSound()
     {
         pickUpSound.Play();
