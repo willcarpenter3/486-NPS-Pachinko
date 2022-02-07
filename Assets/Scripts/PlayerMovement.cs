@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject player;
     public GameObject container;
     public GameObject pointer;
+
+    public GameObject dustParticle;
     private Rigidbody rb;
     private float movementX;
 
@@ -41,6 +43,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Peg") || collision.gameObject.CompareTag("Draggable"))
         {
+            //Start particle effect
+            GameObject particle = Instantiate(dustParticle, collision.contacts[0].point, transform.rotation);
+            particle.GetComponent<ParticleSystem>().Play();
+            Destroy(particle, 1f);
+            
+
             // Disable the collided object after a short delay
             StartCoroutine("DisablePeg", collision.gameObject);
 

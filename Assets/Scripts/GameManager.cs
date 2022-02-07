@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI pointText;
 
+    public GameObject gameplayElements;
+
+    public GameObject cannonsLeft;
+    public GameObject cannonsRight;
+
     private bool isPlaying = false;
 
     private int points = 0;
@@ -56,5 +61,25 @@ public class GameManager : MonoBehaviour
     public void decreaseMultiplier()
     {
         multiplier -= 0.8f;
+    }
+
+    public void winGame()
+    {
+        StartCoroutine("WinCoroutine");
+    }
+
+    private IEnumerator WinCoroutine()
+    {
+        gameplayElements.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        SoundManager.Instance.PlayCannonSound();
+        foreach (ParticleSystem p in cannonsLeft.transform.GetComponentsInChildren<ParticleSystem>())
+        {
+            p.Play();
+        }
+        foreach (ParticleSystem p in cannonsRight.transform.GetComponentsInChildren<ParticleSystem>())
+        {
+            p.Play();
+        }
     }
 }

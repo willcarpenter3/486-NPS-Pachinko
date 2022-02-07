@@ -265,6 +265,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.392949, y: 7.3659463, z: 1.1841261}
   m_Center: {x: -0.0000949502, y: 3.0946348, z: 0.016456157}
+--- !u!114 &3589844776080509359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972674261408041408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de8b98e69988fa4e8508fb86e07a32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkEffect: {fileID: 2803661882849515877, guid: b913dcfa4fd0c894aa333c2505e5e1ef, type: 3}
 --- !u!1001 &2367975089906941966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -345,6 +358,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.392949, y: 7.3659463, z: 1.1841261}
   m_Center: {x: -0.0000949502, y: 3.0946348, z: 0.016456157}
+--- !u!114 &4049840389520771175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3178931235526131039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de8b98e69988fa4e8508fb86e07a32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkEffect: {fileID: 2803661882849515877, guid: b913dcfa4fd0c894aa333c2505e5e1ef, type: 3}
 --- !u!1001 &3400132739126251874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -425,6 +451,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.392949, y: 7.3659463, z: 1.1841261}
   m_Center: {x: -0.0000949502, y: 3.0946348, z: 0.016456157}
+--- !u!114 &2073070657912806029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2589248074648316979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de8b98e69988fa4e8508fb86e07a32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkEffect: {fileID: 2803661882849515877, guid: b913dcfa4fd0c894aa333c2505e5e1ef, type: 3}
 --- !u!1001 &4029956048113655457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -505,6 +544,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.392949, y: 7.3659463, z: 1.1841261}
   m_Center: {x: -0.0000949502, y: 3.0946348, z: 0.016456157}
+--- !u!114 &3672654109402118917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4263834063502926832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de8b98e69988fa4e8508fb86e07a32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkEffect: {fileID: 2803661882849515877, guid: b913dcfa4fd0c894aa333c2505e5e1ef, type: 3}
 --- !u!1001 &5768038004707972211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -710,14 +762,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8eee32f655c054448d0d9b8881812fc, type: 3}
---- !u!4 &6820430882284133840 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b8eee32f655c054448d0d9b8881812fc, type: 3}
-  m_PrefabInstance: {fileID: 6425986569913186875}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6191562649014503274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b8eee32f655c054448d0d9b8881812fc, type: 3}
+  m_PrefabInstance: {fileID: 6425986569913186875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6820430882284133840 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b8eee32f655c054448d0d9b8881812fc, type: 3}
   m_PrefabInstance: {fileID: 6425986569913186875}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &783997597203092511
@@ -733,6 +785,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.392949, y: 7.3659463, z: 1.1841261}
   m_Center: {x: -0.0000949502, y: 3.0946348, z: 0.016456157}
+--- !u!114 &5916584191886224581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191562649014503274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de8b98e69988fa4e8508fb86e07a32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkEffect: {fileID: 2803661882849515877, guid: b913dcfa4fd0c894aa333c2505e5e1ef, type: 3}
 --- !u!1001 &7702494836455995558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -887,3 +952,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.392949, y: 7.3659463, z: 1.1841261}
   m_Center: {x: -0.0000949502, y: 3.0946348, z: 0.016456157}
+--- !u!114 &2577754972382571739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8979174575682630688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de8b98e69988fa4e8508fb86e07a32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkEffect: {fileID: 2803661882849515877, guid: b913dcfa4fd0c894aa333c2505e5e1ef, type: 3}

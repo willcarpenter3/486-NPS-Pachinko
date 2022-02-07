@@ -5,7 +5,6 @@ using TMPro;
 
 public class WinScript : MonoBehaviour
 {
-    public bool win = true;
 
     public int pointAmount = 200;
 
@@ -27,8 +26,8 @@ public class WinScript : MonoBehaviour
         {
             GameManager.Instance.addPoints(pointAmount);
             SoundManager.Instance.PlayWinSound();
-            Time.timeScale = 0;
             winPanel.SetActive(true);
+            GameManager.Instance.winGame();
         }
     }
 }

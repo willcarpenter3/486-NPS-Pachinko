@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6114813224598876235}
   - component: {fileID: 6114813224598876232}
   - component: {fileID: 6114813224598876233}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DustEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
