@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Draggable : MonoBehaviour
 {
     public bool wrong = true;
 
-    public Material goodMat;
-    public Material badMat;
+    public TextMeshPro text;
+    public Color goodMat;
+    public Color badMat;
 
     private bool playing = false;
     private bool bouncy = false;
@@ -32,6 +34,9 @@ public class Draggable : MonoBehaviour
                     break;
             }
         }
+
+        goodMat = Color.green;
+        badMat = Color.red;
         
     }
 
@@ -79,11 +84,13 @@ public class Draggable : MonoBehaviour
             //Deal with materials
             if (wrong)
             {
-                GetComponent<MeshRenderer>().material = badMat;
+                //GetComponent<MeshRenderer>().material = badMat;
+                text.color = badMat;
             }
             else
             {
-                GetComponent<MeshRenderer>().material = goodMat;
+                //GetComponent<MeshRenderer>().material = goodMat;
+                text.color = goodMat;
             }
 
             //Handle Points
@@ -96,6 +103,14 @@ public class Draggable : MonoBehaviour
             {
                 GameManager.Instance.addPoints(10);
                 GameManager.Instance.increaseMultiplier();
+            }
+            PlayerMovement p = collision.gameObject.GetComponent<PlayerMovement>();
+            if (wrong)
+            {
+                p.hitCorrect = false;
+            }
+            else {
+                p.hitCorrect = true;
             }
         }
      

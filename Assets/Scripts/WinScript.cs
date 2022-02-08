@@ -9,6 +9,7 @@ public class WinScript : MonoBehaviour
     public int pointAmount = 200;
 
     public GameObject winPanel;
+    public GameObject losePanel;
 
     public TextMeshProUGUI pointText;
 
@@ -24,10 +25,20 @@ public class WinScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.addPoints(pointAmount);
-            SoundManager.Instance.PlayWinSound();
-            winPanel.SetActive(true);
-            GameManager.Instance.winGame();
+            PlayerMovement p = other.gameObject.GetComponent<PlayerMovement>();
+            if (p.hitCorrect)
+            {
+                GameManager.Instance.addPoints(pointAmount);
+                SoundManager.Instance.PlayWinSound();
+                winPanel.SetActive(true);
+                GameManager.Instance.winGame();
+            }
+            else {
+                //GameManager.Instance.addPoints(pointAmount);
+                //SoundManager.Instance.PlayWinSound();
+                losePanel.SetActive(true);
+                GameManager.Instance.loseGame();
+            }
         }
     }
 }

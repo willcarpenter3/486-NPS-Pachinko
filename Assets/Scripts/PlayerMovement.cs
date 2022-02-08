@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float movementX;
 
+    public bool hitCorrect = false;
+
     Input controls;
     void Start()
     {

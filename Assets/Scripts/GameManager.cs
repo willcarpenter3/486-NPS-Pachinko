@@ -68,6 +68,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine("WinCoroutine");
     }
 
+    public void loseGame() 
+    {
+        StartCoroutine("LoseCoroutine");
+    }
+
     private IEnumerator WinCoroutine()
     {
         gameplayElements.SetActive(false);
@@ -81,5 +86,12 @@ public class GameManager : MonoBehaviour
         {
             p.Play();
         }
+    }
+
+    private IEnumerator LoseCoroutine()
+    {
+        gameplayElements.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        
     }
 }

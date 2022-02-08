@@ -732,6 +732,10 @@ PrefabInstance:
       propertyPath: winPanel
       value: 
       objectReference: {fileID: 766629320}
+    - target: {fileID: 1677368264822806027, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 1511887719}
     - target: {fileID: 1972674261408041408, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -748,6 +752,10 @@ PrefabInstance:
       propertyPath: winPanel
       value: 
       objectReference: {fileID: 766629320}
+    - target: {fileID: 2304277270125605866, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 1511887719}
     - target: {fileID: 2570350418819928389, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -776,6 +784,10 @@ PrefabInstance:
       propertyPath: winPanel
       value: 
       objectReference: {fileID: 766629320}
+    - target: {fileID: 3292069426339904222, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 1511887719}
     - target: {fileID: 3393475687692240722, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
       propertyPath: m_Name
       value: BoardBottom
@@ -800,6 +812,10 @@ PrefabInstance:
       propertyPath: winPanel
       value: 
       objectReference: {fileID: 766629320}
+    - target: {fileID: 5267997863252625088, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 1511887719}
     - target: {fileID: 5267997863252625101, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -812,6 +828,10 @@ PrefabInstance:
       propertyPath: winPanel
       value: 
       objectReference: {fileID: 766629320}
+    - target: {fileID: 5523234848738250155, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 1511887719}
     - target: {fileID: 5572684852100819556, guid: 2ef97f1163d29ce468b11602acbe4e5a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2692,6 +2712,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1380862020884671839, guid: 53f4e0fa1f7c4ce40a4bdfbe371c186a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1380862021130975041, guid: 53f4e0fa1f7c4ce40a4bdfbe371c186a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2711,6 +2735,10 @@ PrefabInstance:
     - target: {fileID: 1380862021251991883, guid: 53f4e0fa1f7c4ce40a4bdfbe371c186a, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380862021251991883, guid: 53f4e0fa1f7c4ce40a4bdfbe371c186a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1380862021565817909, guid: 53f4e0fa1f7c4ce40a4bdfbe371c186a, type: 3}
       propertyPath: m_Layer
@@ -3581,6 +3609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Peg (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8985450321815870397, guid: c54c046ce15236545b8720cdd7bf0efa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c54c046ce15236545b8720cdd7bf0efa, type: 3}
 --- !u!1 &1202760057 stripped
@@ -3950,6 +3982,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6622999937317272868, guid: 1dac0b1f4911a0b47a7497642d802982, type: 3}
   m_PrefabInstance: {fileID: 7646021404179727851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1511887719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1380862021251991883, guid: 53f4e0fa1f7c4ce40a4bdfbe371c186a, type: 3}
+  m_PrefabInstance: {fileID: 766629319}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1516524154
 PrefabInstance:
@@ -4354,6 +4391,10 @@ PrefabInstance:
     - target: {fileID: 8985450321815870397, guid: c54c046ce15236545b8720cdd7bf0efa, type: 3}
       propertyPath: m_Name
       value: Barrel_Peg (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985450321815870397, guid: c54c046ce15236545b8720cdd7bf0efa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c54c046ce15236545b8720cdd7bf0efa, type: 3}
@@ -5702,6 +5743,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 33134068}
     m_Modifications:
+    - target: {fileID: 3599924964131015701, guid: 1dac0b1f4911a0b47a7497642d802982, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 7646021404179727852}
     - target: {fileID: 3599924964131015703, guid: 1dac0b1f4911a0b47a7497642d802982, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -5757,6 +5802,14 @@ PrefabInstance:
     - target: {fileID: 3599924966192275453, guid: 1dac0b1f4911a0b47a7497642d802982, type: 3}
       propertyPath: m_TagString
       value: Draggable
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945197759996066314, guid: 1dac0b1f4911a0b47a7497642d802982, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945197759996066314, guid: 1dac0b1f4911a0b47a7497642d802982, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6280540761099890800, guid: 1dac0b1f4911a0b47a7497642d802982, type: 3}
       propertyPath: m_Layer
@@ -5864,3 +5917,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dac0b1f4911a0b47a7497642d802982, type: 3}
+--- !u!114 &7646021404179727852 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7980259112842938914, guid: 1dac0b1f4911a0b47a7497642d802982, type: 3}
+  m_PrefabInstance: {fileID: 7646021404179727851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

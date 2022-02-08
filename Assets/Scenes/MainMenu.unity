@@ -164,7 +164,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 400}
+  m_SizeDelta: {x: 400, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56645647
 MonoBehaviour:
@@ -348,7 +348,19 @@ MonoBehaviour:
     (Baruque sur le lac)
 
 
-    All licensed CC0 (Public Domain) on opengameart.org'
+    All licensed CC0 (Public Domain) on opengameart.org
+
+
+    White
+    Clouds Skybox Texture Copyright PNGEGG DMCA
+
+    Sailing Ship - Standard Unity
+    Asset EULA, credit to Joe Censored Games
+
+    Anchor Icons credit to Inmotus
+    Design
+
+    Menu Background - painting by Edward Moran'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66b0a20d185febb4ba58a45ad7749182, type: 2}
   m_sharedMaterial: {fileID: 2075005835461470514, guid: 66b0a20d185febb4ba58a45ad7749182, type: 2}
@@ -2568,7 +2580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -205}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1991733587
